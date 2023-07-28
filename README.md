@@ -146,3 +146,16 @@ import Link from 'next/link'
 - useEffect entre otros hooks que disparan acciones del lado del cliente, no se pueden usar en server components. Si es necesario, especificar `"use client"` en el inicio del archivo del componente.
 - Llamadas a Fetch, realizarán un caché de forma forzada por defecto a menos que se especifique lo contrario. Fetch en Next, tiene propiedades para revalidar, mantener en caché y nunca mantenerlo en caché.
 - Si vas a utilizar Client Components asegúrate de que sean en las hojas de del árbol de componentes ya que a partir de donde especifiques como `'use client'`todos sus componentes hijos se volverán también componentes cliente.
+
+## Hook usePathname()
+
+Se trata de un hook para componentes del lado del cliente que retorna la ruta del URL actual.
+
+```tsx
+import { usePathname } from 'next/navigation'
+
+export function App() {
+  const currentPath = usePathname()
+  return <p>{currentPath}</p>
+}
+```
