@@ -17,9 +17,7 @@ export function Navbar() {
       </Link>
       <ul className="flex gap-2">
         {navItems.map(({ path, text }) => (
-          <li key={path}>
-            <ActiveLink path={path} text={text} />
-          </li>
+          <ActiveLink key={path} path={path} text={text} />
         ))}
       </ul>
     </nav>

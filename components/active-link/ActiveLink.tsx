@@ -11,14 +11,19 @@ interface Props {
 
 export function ActiveLink({ path, text }: Props) {
   const currentPath = usePathname()
+  const ActiveLinkClassNames = currentPath === path
+    ? `${styles.link} ${styles['active-link']}`
+    : `${styles.link}`
+
   return (
-    <Link
-      href={path}
-      className={`${styles.link} ${
-        currentPath === path && styles['active-link']
-      }`}
-    >
-      {text}
-    </Link>
+    <li >
+      <Link
+        href={path}
+        className={ActiveLinkClassNames}
+      >
+        {text}
+        { }
+      </Link>
+    </li>
   )
 }
