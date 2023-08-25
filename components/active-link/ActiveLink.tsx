@@ -22,7 +22,6 @@ export function ActiveLink({ path, text }: Props) {
         className={ActiveLinkClassNames}
       >
         {text}
-        { }
       </Link>
     </li>
   )
